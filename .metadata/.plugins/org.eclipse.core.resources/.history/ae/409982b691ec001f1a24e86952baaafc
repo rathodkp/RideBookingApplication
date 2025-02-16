@@ -1,0 +1,15 @@
+package com.ridebookingapp;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class RideBookingApplication {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Hello kalpna...! ");
+		SpringApplication.run(RideBookingApplication.class, args);
+	}
+
+}

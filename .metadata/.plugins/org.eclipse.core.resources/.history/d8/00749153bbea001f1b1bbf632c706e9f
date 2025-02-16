@@ -1,0 +1,9 @@
+package com.ridebookingapp.security;
+
+
+
+public class WebSecurityConfig {
+
+	
+	
+}

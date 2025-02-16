@@ -1,0 +1,21 @@
+package com.ridebookingapp.service;
+
+import com.ridebookingapp.model.UserDto;
+
+
+
+public interface UserService{
+
+	
+		
+	com.ridebookingapp.model.User save(UserDto userdto);
+
+	
+	
+	
+	
+	
+	
+	}
+
+

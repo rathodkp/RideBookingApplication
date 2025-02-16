@@ -1,0 +1,5 @@
+package com.ridebookingapp.controller;
+
+public class UserController {
+
+}

@@ -1,0 +1,35 @@
+package com.ridebookingapp.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.ridebookingapp.model.UserDto;
+import com.ridebookingapp.userservice.UserService;
+
+@RestController
+public class UserController {
+	
+	@Autowired
+	private UserService userservice;
+	
+	
+	
+	@GetMapping("/registration")
+	public String getRegistrationPage() {
+		return "register";
+	}
+	
+	@PostMapping("/api/registration")
+	public String saveUser(@ModelAttribute("user") UserDto userDto , Model model) {
+		
+		userservice.save(userDto);
+		model.addAttribute("message", "Register Successfully..!");
+		return "Register";
+		
+	}
+
+}

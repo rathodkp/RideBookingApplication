@@ -1,0 +1,10 @@
+package com.ridebookingapp.model;
+
+public class UserRole {
+
+	public String name() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

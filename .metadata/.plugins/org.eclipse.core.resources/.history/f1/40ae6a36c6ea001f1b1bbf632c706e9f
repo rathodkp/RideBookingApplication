@@ -1,0 +1,52 @@
+package com.ridebookingapp.registration;
+
+
+
+public class RegistrationRequest {
+	
+	private final String firstname;
+	private final String lastname;
+	private final String email;
+	private final String password;
+	
+
+	
+	public RegistrationRequest() {
+		this.firstname = "";
+		this.lastname = "";
+		this.email = "";
+		this.password = "";
+		}
+
+
+
+	public String getFirstname() {
+		return firstname;
+	}
+
+
+
+	public String getLastname() {
+		return lastname;
+	}
+
+
+
+	public String getEmail() {
+		return email;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "RegistrationRequest [firstname=" + firstname + ", lastname=" + lastname + ", email=" + email
+				+ ", password=" + password + "]";
+	}
+	
+	
+}

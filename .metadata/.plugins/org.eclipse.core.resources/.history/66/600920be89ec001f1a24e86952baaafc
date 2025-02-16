@@ -1,0 +1,40 @@
+package com.ridebookingapp.service;
+
+import org.apache.catalina.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
+
+import com.ridebookingapp.model.UserDto;
+import com.ridebookingapp.repository.UserRepository;
+
+
+
+public interface UserService{
+
+	/*private static final String USER_NOT_FOUND_MSG = 
+			"user with email %s not found";
+	private final UserRepository userrepository = null;
+	
+	
+	
+	@Override
+	public UserDetails loadUserByUsername(String username) 
+			throws UsernameNotFoundException {
+				return userrepository.findByEmail(email)
+						.orElSeThrow(() -> new 
+								UsernameNotFoundException(String.format(USER_NOT_FOUND_MSG, email))); */
+		
+		
+	User save (UserDto userdto);
+
+	
+	
+	
+	
+	
+	
+	}
+
+

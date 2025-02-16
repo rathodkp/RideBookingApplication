@@ -1,0 +1,5 @@
+package com.ridebookingapp.security;
+
+public class PasswordEncoder {
+
+}

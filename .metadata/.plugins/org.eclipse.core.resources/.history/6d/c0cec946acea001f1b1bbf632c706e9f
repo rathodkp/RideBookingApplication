@@ -1,0 +1,5 @@
+package com.ridebookingapp.userservice;
+
+public class UserService {
+
+}

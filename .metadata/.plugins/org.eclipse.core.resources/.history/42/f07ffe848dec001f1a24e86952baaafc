@@ -1,0 +1,41 @@
+package com.ridebookingapp.service;
+
+import java.util.Iterator;
+
+import org.apache.catalina.Group;
+import org.apache.catalina.Role;
+import org.apache.catalina.User;
+import org.apache.catalina.UserDatabase;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
+import com.ridebookingapp.model.UserDto;
+import com.ridebookingapp.repository.UserRepository;
+
+public class UserServiceImpl implements UserService {
+
+	@Autowired
+	private UserRepository userRepository;
+	
+	 @Autowired
+	    private PasswordEncoder passwordEncoder; // For hashing passwords
+	
+	 @Override
+	    public User save(UserDto userDto) {
+	        User user = new User();
+	        user.setEmail(userDto.getEmail());
+	        user.setPassword(passwordEncoder.encode(userDto.getPassword())); // Encrypt password
+	        user.setRole(userDto.getRole());
+	        user.setFullName(userDto.getFullname());
+
+	        return userRepository.save(user);
+	    }
+	
+
+}
+
+
+
+
+
+
